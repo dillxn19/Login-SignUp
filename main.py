@@ -3,6 +3,8 @@ conn = sqlite3.connect("users.db")
 c = conn.cursor()
 while True:
     ask = input("To login press 1 \nTo signup press 2\n")
+
+    #login functionality
     if ask == "1":
         un = input("Username: ")
         pw = input("Password: ")
@@ -13,6 +15,8 @@ while True:
         else:
             print("Login Failed")
 
+
+    #signup functionality
     elif ask == "2":
         new_name = input("New Name: ")
         new_un = input("New Username: ")
